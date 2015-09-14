@@ -8,6 +8,10 @@
     "orientation",
     "device orientation"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/walmartreact/react-native-orientation-listener.git"
+  },
   "author": "Ken Wheeler",
   "license": "MIT",
   "peerDependencies": {
