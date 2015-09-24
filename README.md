@@ -16,7 +16,7 @@
 
 Import the library:
 
-```
+```javascript
 var Orientation = require('react-native-orientation-listener');
 ```
 
@@ -24,7 +24,7 @@ var Orientation = require('react-native-orientation-listener');
 
 This method will return the current orientation and device string in the form of a callback:
 
-```
+```javascript
 componentDidMount(){
   Orientation.getOrientation(
     (orientation, device) => {
@@ -38,7 +38,7 @@ componentDidMount(){
 
 This method will add a listener that will call the callback anytime the device orienatation changes:
 
-```
+```javascript
 _setOrientation(data) {
   this.setState({
     orientation: evt.orientation,
@@ -54,7 +54,7 @@ componentDidMount(){
 
 This method removes the listener you added in componentDidMount:
 
-```
+```javascript
 componentWillUnmount() {
   Orientation.removeListener(this._setOrientation);
 }
