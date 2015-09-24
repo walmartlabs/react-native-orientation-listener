@@ -5,12 +5,37 @@
 ###Getting Started
 
 - Run `npm install --save react-native-orientation-listener`
+
+###IOS
+
 - Open your Xcode project, and select your project in the Project Navigator tab
 - Right click the `Libraries` folder and select "Add files to [your project]"
 - Add `RCTOrientationListener.xcodeproj` from your `node_modules` folder
 - Click your main project icon back in the Project Navigator to bring up preferences, and go to the `Build Phases` tab.
 - Click the `+` button underneath `Link Binary With Libraries` section.
 - Add `libRCTOrientationListener.a`
+
+###Android
+- Open `/android/settings.gradle`
+- Replace `include ':app'` with:
+
+```
+include ':com.walmartreact.ReactOrientationListener', ':app'
+project(':com.walmartreact.ReactOrientationListener').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-orientation-listener/android')
+```
+- Open `android/app/build.gradle`
+- Add the following under `dependencies`:
+
+```
+compile project(':com.walmartreact.ReactOrientationListener')
+```
+- Open your `MainActivity.java` file under `android/src`
+- Import the lib using `import com.walmartreact.ReactOrientationListener.*;`
+- Add the following after `.addPackage(new MainReactPackage())`:
+
+```
+.addPackage(new ReactOrientationListener())
+```
 
 ###Usage
 
