@@ -1,7 +1,8 @@
 'use strict';
 
 var React = require('react-native');
-var RCTDeviceEventEmitter = require('RCTDeviceEventEmitter');
+
+var { DeviceEventEmitter } = React;
 
 var {NativeModules} = React;
 
@@ -10,12 +11,12 @@ module.exports = {
     NativeModules.OrientationListener.getOrientation(callback);
   },
   addListener: function(callback) {
-    return RCTDeviceEventEmitter.addListener(
+    return DeviceEventEmitter.addListener(
       'orientationDidChange', callback
     );
   },
   removeListener: function(listener) {
-    RCTDeviceEventEmitter.removeListener(
+    DeviceEventEmitter.removeListener(
       'orientationDidChange', listener
     );
   }
