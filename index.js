@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react-native');
-var RCTDeviceEventEmitter = require('RCTDeviceEventEmitter');
+var RCTDeviceEventEmitter = require('react-native/Libraries/Device/RCTDeviceEventEmitter');
 
 var {NativeModules} = React;
 
