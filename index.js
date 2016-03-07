@@ -1,10 +1,9 @@
 'use strict';
 
 var React = require('react-native');
+<<<<<<< HEAD
 
-var { DeviceEventEmitter } = React;
-
-var {NativeModules} = React;
+var { DeviceEventEmitter, NativeModules } = React;
 
 module.exports = {
   getOrientation: function(callback) {

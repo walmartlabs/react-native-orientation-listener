@@ -42,9 +42,11 @@ public class ReactOrientationListenerModule extends ReactContextBaseJavaModule {
         }
         params.putString("orientation", orientationValue);
         params.putString("device", getDeviceName());
-        thisContext
-          .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-          .emit("orientationDidChange", params);
+        if (thisContext.hasActiveCatalystInstance()) {
+          thisContext
+            .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+            .emit("orientationDidChange", params);
+        }
       }
     };
 
