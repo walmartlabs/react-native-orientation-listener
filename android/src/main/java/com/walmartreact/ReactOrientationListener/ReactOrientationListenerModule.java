@@ -35,9 +35,9 @@ public class ReactOrientationListenerModule extends ReactContextBaseJavaModule {
       public void onOrientationChanged(int orientation) {
         WritableNativeMap params = new WritableNativeMap();
         String orientationValue = "";
-        if(orientation == 0) {
+        if(orientation < 89 || orientation > 280) {
           orientationValue = "PORTRAIT";
-        } else {
+        } else  {
           orientationValue = "LANDSCAPE";
         }
         params.putString("orientation", orientationValue);
