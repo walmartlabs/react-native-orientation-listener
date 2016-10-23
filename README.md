@@ -61,10 +61,10 @@ componentDidMount(){
 
 ####addListener(callback)
 
-This method will add a listener that will call the callback anytime the device orienatation changes:
+This method will add a listener that will call the callback anytime the device orientation changes:
 
 ```javascript
-_setOrientation(data) {
+_setOrientation(evt) {
   this.setState({
     orientation: evt.orientation,
     device: evt.device
