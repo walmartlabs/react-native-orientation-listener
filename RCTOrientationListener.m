@@ -5,8 +5,8 @@
 //  Copyright (c) 2015 Facebook. All rights reserved.
 //
 
-#import "RCTOrientationListener.h"
-#import "RCTBridge.h"
+#import <React/RCTOrientationListener.h>
+#import <React/RCTBridge.h>
 
 @implementation RCTOrientationListener
 
