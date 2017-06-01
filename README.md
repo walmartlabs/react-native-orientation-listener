@@ -2,11 +2,11 @@
 
 > A react-native library for obtaining current device orientation
 
-###Getting Started
+### Getting Started
 
 - Run `npm install --save react-native-orientation-listener`
 
-###IOS
+### IOS
 
 - Open your Xcode project, and select your project in the Project Navigator tab
 - Right click the `Libraries` folder and select "Add files to [your project]"
@@ -15,7 +15,7 @@
 - Click the `+` button underneath `Link Binary With Libraries` section.
 - Add `libRCTOrientationListener.a`
 
-###Android
+### Android
 - Open `/android/settings.gradle`
 - Replace `include ':app'` with:
 
@@ -37,7 +37,7 @@ compile project(':com.walmartreact.ReactOrientationListener')
 .addPackage(new ReactOrientationListener())
 ```
 
-###Usage
+### Usage
 
 Import the library:
 
@@ -45,7 +45,7 @@ Import the library:
 var Orientation = require('react-native-orientation-listener');
 ```
 
-####getOrientation(callback)
+#### getOrientation(callback)
 
 This method will return the current orientation and device string in the form of a callback:
 
@@ -59,7 +59,7 @@ componentDidMount(){
 }
 ```
 
-####addListener(callback)
+#### addListener(callback)
 
 This method will add a listener that will call the callback anytime the device orienatation changes:
 
@@ -75,7 +75,7 @@ componentDidMount(){
 }
 ```
 
-####removeListener(callback)
+#### removeListener(callback)
 
 This method removes the listener you added in componentDidMount:
 

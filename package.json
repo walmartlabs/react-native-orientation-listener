@@ -3,6 +3,7 @@
   "version": "0.0.4",
   "description": "A react-native library for obtaining current device orientation",
   "main": "index.js",
+  "types": "index.d.ts",
   "keywords": [
     "react-native",
     "orientation",

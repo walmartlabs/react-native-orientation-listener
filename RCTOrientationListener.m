@@ -6,7 +6,7 @@
 //
 
 #import "RCTOrientationListener.h"
-#import "RCTBridge.h"
+#import <React/RCTBridge.h>
 
 @implementation RCTOrientationListener
 
